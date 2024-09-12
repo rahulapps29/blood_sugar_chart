@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ddd;
+}
+
+.dataCard {
+  background-color: #efefef;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.revenueCard {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+}
+
+.customerCard,
+.categoryCard {
+  width: calc(50% - 0.5rem);
+  height: auto;
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .customerCard,
+  .categoryCard {
+    width: 100%;
+  }
+}
