@@ -13,7 +13,7 @@ function Time_Series() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://bloodsugar.onrender.com/api/tasks/d"
+          "https://sugarcount.onrender.com/api/tasks/d"
         );
         setData(response.data);
         setLoading(false);
