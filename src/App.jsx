@@ -2,7 +2,7 @@ import React from "react";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 
-import "./App1.css";
+import "./App.css";
 
 import revenueData from "./data/revenueData.json";
 import sourceData from "./data/sourceData.json";
@@ -28,7 +28,7 @@ export const App = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://taentry.onrender.com/api/tasks/d"
+          "https://sugarcount.onrender.com/api/tasks/d"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -50,18 +50,18 @@ export const App = () => {
 
   return (
     <div className="App">
-      <TotalAttendance data={data} />
+      {/* <TotalAttendance data={data} /> */}
 
-      <div className="dataCard revenueCard">
+      <div>
         <Time_Series data={data} />
       </div>
 
-      <div className="dataCard customerCard">
+      {/* <div className="dataCard customerCard">
         <Location_Count data={data} />
       </div>
       <div className="dataCard categoryCard">
         <LocationPercentage data={data} />
-      </div>
+      </div> */}
     </div>
   );
 };

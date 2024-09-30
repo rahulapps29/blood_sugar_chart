@@ -1,0 +1,110 @@
+/* src/App.css */
+
+/* Center the table within its container */
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px; /* Optional: Add padding around the table */
+}
+
+/* Style the table */
+table {
+  width: 95%;
+  max-width: 800px; /* Optional: Limit the table width for better readability */
+  border-collapse: collapse;
+}
+
+/* Center the text in table headers and cells */
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center; /* Center text in table headers and cells */
+  text-transform: capitalize; /* Capitalize the first letter of each word */
+}
+
+/* Style for table headers */
+th {
+  background-color: #f2f2f2;
+}
+
+@media print {
+  .no-print {
+    display: none; /* Hide elements with the class 'no-print' */
+  }
+}
+
+/* src/App.css */
+
+/* Style for the print button */
+.print-button {
+  position: fixed; /* Fixed positioning to keep it in place */
+  top: 5px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  padding: 10px 20px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Button hover effect */
+.print-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hide elements when printing */
+@media print {
+  .no-print {
+    display: none; /* Hide elements with the class 'no-print' */
+  }
+  .print-button {
+    display: none; /* Hide the print button when printing */
+  }
+}
+
+/* src/App.css */
+
+/* Style the table container */
+.table-container {
+  overflow-x: auto; /* Allow horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  padding: 0 10px; /* Optional: Add padding to prevent the table from touching the edges */
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Adjust margins and padding for smaller screens */
+@media (max-width: 600px) {
+  .table-container {
+    padding: 0 5px; /* Adjust padding as needed */
+  }
+
+  table {
+    font-size: 14px; /* Optional: Adjust font size for better readability */
+  }
+
+  th,
+  td {
+    padding: 6px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Hide elements when printing */
+@media print {
+  .no-print {
+    display: none; /* Hide elements with the class 'no-print' */
+  }
+  .print-button {
+    display: none; /* Hide the print button when printing */
+  }
+}
