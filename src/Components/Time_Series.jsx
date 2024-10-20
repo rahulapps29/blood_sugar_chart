@@ -13,7 +13,7 @@ function Time_Series() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sugarcount.onrender.com/api/tasks/d"
+          "http://192.168.29.164:5000/api/tasks/d"
         );
         setData(response.data);
         setLoading(false);
@@ -76,11 +76,12 @@ function Time_Series() {
                 <th>Meal</th>
                 <th>Sugar mg/dl</th>
                 <th>Insulin (.01 ml)</th>
+                <th>Lantus (.01 ml)</th>
               </tr>
             </thead>
             <tbody>
               {data.tasks.map((item) => {
-                const { date, time } = formatDate(item.createdAt); // Adjust 'item.datetime' to your field name
+                const { date, time } = formatDate(item.tDate); // Adjust 'item.datetime' to your field name
                 return (
                   <tr key={item.id}>
                     <td>{date}</td>
@@ -89,6 +90,7 @@ function Time_Series() {
                     <td>{item.meal}</td>
                     <td>{item.sugar}</td>
                     <td>{item.insulin}</td>
+                    <td>{item.lantus}</td>
                   </tr>
                 );
               })}
