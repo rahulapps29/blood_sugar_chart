@@ -13,7 +13,7 @@ function Time_Series() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.29.164:5000/api/tasks/d"
+          "http://223.239.128.54:5000/api/tasks/d"
         );
         setData(response.data);
         setLoading(false);

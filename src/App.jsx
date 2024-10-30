@@ -27,7 +27,7 @@ export const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://192.168.29.164:5000/api/tasks/d");
+        const response = await fetch("http://223.239.128.54:5000/api/tasks/d");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
